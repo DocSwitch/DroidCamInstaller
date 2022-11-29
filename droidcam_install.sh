@@ -12,5 +12,9 @@ cd droidcam
 ./install-client
 ./install-video
 ./install-sound
-echo "width=1280" >> /etc/modprobe.d/droidcam.conf
-echo "height=720" >> /etc/modprobe.d/droidcam.conf #for HD 720p
+cd /etc/modprobe.d
+cp droidcam.conf droidcam.conf.bak
+rm droidcam.conf
+touch droidcam.conf
+echo "options v4l2loopback_dc width=1280 height=720" >> droidcam.conf #for HD 720p
+echo "options snd-aloop index=1" >> droidcam.conf
