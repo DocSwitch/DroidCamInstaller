@@ -1,4 +1,3 @@
-#author: WhiteShield <whiteshield.tg@protonmail.com> @ Wed Jun 22, 2022
 #!/bin/bash
 if [ "$EUID" -ne 0 ]
   then echo "Please run as root"
